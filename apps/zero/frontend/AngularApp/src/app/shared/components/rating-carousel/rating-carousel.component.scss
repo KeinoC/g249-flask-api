@@ -1,0 +1,83 @@
+
+@import "src/assets/styles/global.scss";
+@import "src/assets/styles/_fonts.scss";
+@import "src/assets/styles/_spacing.scss";
+@import "src/assets/styles/media-queries.scss";
+@import "src/assets/styles/_color_pallete.scss";
+@import "src/assets/styles/_common.scss";
+@import "src/assets/styles/_layouts.scss";
+
+
+:host {
+
+  @keyframes moveLeft {
+    0%{
+      left:0px
+    }
+    100%{
+      left:-50%
+    }
+  }
+
+  @keyframes moveRight {
+    0%{
+      left:-50%
+    }
+    100%{
+      left:0px
+    }
+  }
+
+
+
+  &.RatingCarouselView{
+    display: block;
+    .RatingCarousel{
+      &Main{
+        &Pod{
+          @include MainPodCssRule1;
+          padding:0;
+          align-items: center;
+          justify-content: space-between;
+
+        }
+        &Icon {
+          &0 {
+            color:var(--wml-secondary);
+            font-size: $display-xx-large;
+            flex:2 0 20%;
+          }
+        }
+      }
+      &Pod{
+
+        &0{
+
+          display:flex;
+          flex-direction: row;
+          flex:0  1 85%;
+          overflow: hidden;
+          > *{
+            flex:1 0 50%;
+          }
+          &Item {
+            &0 {
+
+              padding: 0 $spacing6;
+              position: relative;
+            }
+            &1{
+              animation: $wml-app-transition-time0 moveRight;
+            }
+            &2{
+              animation: $wml-app-transition-time0 moveLeft;
+            }
+          }
+        }
+      }
+    }
+  }
+
+}
+
+

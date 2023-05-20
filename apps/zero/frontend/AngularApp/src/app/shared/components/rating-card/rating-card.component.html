@@ -1,0 +1,17 @@
+<div [class]="classPrefix('MainPod')">
+  <div [class]="classPrefix('Pod0')">
+    <img [class]="classPrefix('Pod0Img0')" [src]=params.avatar.src [alt]=params.avatar.alt />
+    <div [class]="classPrefix('Pod0Item0')" >
+      <h2 [class]="classPrefix('Pod0Title0')">{{params.title.text}}</h2>
+      <h3 [class]="classPrefix('Pod0Title1')">{{params.subTitle.text}}</h3>
+    </div>
+  </div>
+  <p>{{params.desc.text | translate}}</p>
+  <div [class]="classPrefix('Pod1')">
+    <div [class]="classPrefix('Pod1Item0')">
+      <div *ngFor="let star of [].constructor(5);let i = index;"
+      [class]="params.rating >= i ? 'rating-star-selected' : 'rating-star-unselected' ">
+    </div>
+    </div>
+  </div>
+</div>

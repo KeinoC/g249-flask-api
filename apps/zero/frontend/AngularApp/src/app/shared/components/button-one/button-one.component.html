@@ -1,0 +1,4 @@
+<button (click)="params.button.click($event)" [class]="params.button.class" [ngStyle]="params.button.style">
+  <p [ngStyle]="params.text.style" [class]="params.text.class">{{ params.text.text | translate}}</p>
+  <i *ngIf="params.icon[0].isPresent"  [class]="'fa-solid ' + params.icon[0].class"></i>
+</button>

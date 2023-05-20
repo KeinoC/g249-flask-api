@@ -1,0 +1,9 @@
+<div [class]="classPrefix('MainPod')">
+  <label  [class]="classPrefix('MainItem0')">
+    <input [checked]="params.wmlOptionItem.isChosen" (click)="toggleChosen()" [class]="classPrefix('MainInput0')" type="checkbox"/>
+    <div [class]="classPrefix('MainItem1')">
+      <div [class]="classPrefix('MainItem2')"></div>
+    </div>
+  </label>
+  <p [class]="classPrefix('MainText0')">{{params.wmlOptionItem.text | translate}}</p>
+</div>

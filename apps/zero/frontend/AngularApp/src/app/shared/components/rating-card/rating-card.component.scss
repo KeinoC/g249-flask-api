@@ -1,0 +1,70 @@
+
+@import "src/assets/styles/global.scss";
+@import "src/assets/styles/_fonts.scss";
+@import "src/assets/styles/_spacing.scss";
+@import "src/assets/styles/media-queries.scss";
+@import "src/assets/styles/_color_pallete.scss";
+@import "src/assets/styles/_common.scss";
+@import "src/assets/styles/_layouts.scss";
+
+
+:host {
+
+
+  &.RatingCardView{
+    display: block;
+    .RatingCard{
+      &Main{
+        &Pod{
+          @include MainPodCssRule0;
+          padding:1.5rem;
+          background-color: var(--wml-white);
+          color:var(--wml-black);
+          border-radius: $wml-border-radius0;
+
+          h2{
+            font-size: calc(24/16 * 1rem);
+          }
+          h3{
+            font-size: calc(20/16 * 1rem);
+          }
+
+          p{
+            font-size: calc(18/16 * 1rem);
+          }
+        }
+
+      }
+      &Pod{
+
+        &0{
+          display: flex;
+          justify-content: space-between;
+          &Img {
+            &0 {
+              width: calc(120/16 * 1rem);
+              height: auto;
+              border-radius: 100%;
+
+            }
+          }
+        }
+        &1{
+          margin:$spacing7 0 0 0;
+          display: flex;
+          justify-content: center;
+          &Item {
+            &0 {
+              width: 50%;
+              display:flex;
+              flex-direction: row;
+              justify-content: space-evenly;
+            }
+          }
+
+        }
+      }
+    }
+  }
+
+}

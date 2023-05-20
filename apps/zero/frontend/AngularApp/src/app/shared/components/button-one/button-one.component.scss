@@ -1,0 +1,90 @@
+
+@import "src/assets/styles/global.scss";
+@import "src/assets/styles/_fonts.scss";
+@import "src/assets/styles/_spacing.scss";
+@import "src/assets/styles/media-queries.scss";
+@import "src/assets/styles/_color_pallete.scss";
+@import "src/assets/styles/_common.scss";
+@import "src/assets/styles/_layouts.scss";
+
+@mixin ButtonOneMainButton0{
+  border-radius: $wml-border-radius0;
+  padding:$spacing3;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+
+  &Text{
+    &0{
+    }
+  }
+
+  i{
+    font-size: $wml-p;
+    margin:0  0 0 $spacing3;
+  }
+}
+
+:host {
+
+
+  &.ButtonOneView{
+    display: block;
+    .ButtonOne{
+      &Main{
+        &Pod{
+          @include MainPodCssRule0;
+
+        }
+
+        &Button {
+          @for $i from 0 through 2 {
+            &#{$i} {
+              @include ButtonOneMainButton0;
+
+
+            }
+          }
+
+          &0 {
+            background-color: var(--wml-primary);
+            border:calc(3/16 * 1rem) solid var(--wml-white);
+
+            &Text {
+              &0 {
+                color:var(--wml-white)
+              }
+            }
+
+          }
+
+          &1 {
+            background-color: var(--wml-secondary);
+            border:calc(3/16 * 1rem) solid var(--wml-secondary);
+            &Text {
+              &0 {
+                color:var(--wml-black)
+              }
+            }
+          }
+
+          &2 {
+            background-color: var(--wml-white);
+            border:calc(3/16 * 1rem) solid var(--wml-white);
+            &Text {
+              &0 {
+                color:var(--wml-primary)
+              }
+            }
+          }
+        }
+
+      }
+      &Pod{
+
+        &0{}
+      }
+    }
+  }
+
+}

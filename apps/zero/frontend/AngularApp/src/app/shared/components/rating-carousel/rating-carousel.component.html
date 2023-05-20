@@ -1,0 +1,19 @@
+<div [class]="classPrefix('MainPod')">
+  <div>
+    <i
+    (click)="moveLeft()"
+    [class]="'fa-solid fa-chevron-left ' +classPrefix('MainIcon0')"></i>
+  </div>
+  <div [class]="classPrefix('Pod0')">
+    <div *ngFor="let card of params.cards"
+    (animationend)="cleanupAnimation()"
+    [class]="classPrefix('Pod0Item0') +' ' +card.pod.class ">
+      <rating-card  [params]=card.card></rating-card>
+    </div>
+  </div>
+  <div>
+    <i
+    (click)="moveRight()"
+    [class]="'fa-solid fa-chevron-right ' +classPrefix('MainIcon0')"></i>
+  </div>
+</div>

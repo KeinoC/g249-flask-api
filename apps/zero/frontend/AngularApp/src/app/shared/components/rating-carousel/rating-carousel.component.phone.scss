@@ -1,0 +1,34 @@
+#root rating-carousel{
+  @media #{$mobile}{
+
+    @keyframes mobilemoveLeft {
+      0%{
+        left:0px
+      }
+      100%{
+        left:-100%
+      }
+    }
+
+    @keyframes mobilemoveRight {
+      0%{
+        left:-100%
+      }
+      100%{
+        left:0px
+      }
+    }
+
+    .RatingCarouselPod0 > *{
+      flex:1 0 100%;
+    }
+
+    .RatingCarouselPod0Item1{
+      animation: $wml-app-transition-time0 mobilemoveRight;
+    }
+
+    .RatingCarouselPod0Item2{
+      animation: $wml-app-transition-time0 mobilemoveLeft;
+    }
+  }
+}

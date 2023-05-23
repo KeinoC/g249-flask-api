@@ -28,7 +28,8 @@ class FirebaseManager():
     docs = collection_ref.get()
     for doc in docs:
         doc.reference.delete()
-         
+
+        
 
 
 

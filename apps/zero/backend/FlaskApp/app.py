@@ -91,7 +91,7 @@ if __name__ == "__main__":
       app.run(
         exclude_patterns="site-packages",
         debug=True,ssl_context=(ssl_cert,ssl_key),port=port)
-      # app.run(debug=True)
+      app.run(debug=True)
     else:
       app.run()
 

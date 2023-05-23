@@ -31,13 +31,13 @@ class DevConfigs:
     None
 
   # https://rnacentral.org/help/public-database
-  postgres_manager = PostgresManager({
-    "user":"reader",
-    "pass":"NWDMCE5xdipIjRrp",
-    "host":"hh-pgsql-public.ebi.ac.uk",
-    "port":"5432",
-    "db":"pfmegrnargs",
-  })
+  # postgres_manager = PostgresManager({
+  #   "user":"reader",
+  #   "pass":"NWDMCE5xdipIjRrp",
+  #   "host":"hh-pgsql-public.ebi.ac.uk",
+  #   "port":"5432",
+  #   "db":"pfmegrnargs",
+  # })
   sentry_manager = SentryManager()
   cron_task_runner =  CronTasksRunner()
   watchdog_manager = WatchdogManager()

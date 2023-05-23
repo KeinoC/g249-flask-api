@@ -8,11 +8,6 @@ from urllib.parse import urlparse
 
 myhealthcheck =Blueprint("healthcheck", __name__, url_prefix="/healthz")
 
-
-
-
-
-
 @myhealthcheck.route('/',methods=['GET'])
 def healthcheck():
   time.sleep(1)

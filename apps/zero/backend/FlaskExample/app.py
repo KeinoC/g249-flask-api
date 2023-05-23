@@ -15,7 +15,6 @@ from flask import Flask, request, redirect
 
 # dev additions
 from endpoints.healthcheck import myhealthcheck
-from endpoints.users_endpoint import myusers
 
 
 app = Flask(__name__)
@@ -30,7 +29,6 @@ if ENV_VARS.get("FLASK_BACKEND_ENV") == "DEV":
   )
 
 app.register_blueprint(myhealthcheck)
-app.register_blueprint(myusers)
 
 @app.before_request
 def before_request():
